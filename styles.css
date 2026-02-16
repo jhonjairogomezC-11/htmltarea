@@ -1,0 +1,260 @@
+/* ==========================
+   ESTILO GENERAL (POWER MODE)
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #050505 70%);
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+/* ==========================
+   CABECERA (HEADER)
+========================== */
+
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ff0000, #0a0a0a, #0011ff);
+    color: white;
+    border-bottom: 3px solid rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 8px 25px rgba(255, 0, 0, 0.35);
+}
+
+.header h1 {
+    font-size: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+}
+
+.header p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================
+   MENÚ DE NAVEGACIÓN
+========================== */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(12px);
+    padding: 18px 10px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background: linear-gradient(135deg, red, #0011ff);
+    box-shadow: 0px 0px 18px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+.section {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 45px 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 12px rgba(255, 0, 0, 0.6);
+}
+
+.section p {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: 25px;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.25);
+}
+
+/* ==========================
+   PRODUCTOS (MOTOS)
+========================== */
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.producto {
+    background: linear-gradient(160deg, rgba(255, 0, 0, 0.12), rgba(0, 0, 0, 0.9));
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+    transition: 0.35s ease;
+    position: relative;
+}
+
+/* EFECTO BRILLO */
+.producto::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 140, 255, 0.3);
+    filter: blur(90px);
+    z-index: 0;
+}
+
+.producto:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 15px 30px rgba(255, 0, 0, 0.45);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.4);
+}
+
+.producto h3 {
+    font-size: 22px;
+    padding: 18px 15px 5px;
+    color: white;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+}
+
+.producto p {
+    padding: 0px 15px 15px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.82);
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================
+   FORMULARIO CONTACTO
+========================== */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.35);
+}
+
+.formulario textarea {
+    height: 140px;
+    resize: none;
+}
+
+.formulario button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, red, #0011ff);
+    transition: 0.35s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.formulario button:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.5);
+}
+
+/* ==========================
+   PIE DE PÁGINA
+========================== */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid rgba(255, 0, 0, 0.5);
+    margin-top: 40px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+}
